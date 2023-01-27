@@ -27,6 +27,8 @@ default_floating_border pixel 0
 # 设置窗口间距
 gaps inner 6
 gaps outer 2
+gaps top   24
+# new_window  pixel 0
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -228,11 +230,13 @@ bindsym $mod+r mode "resize"
 # set specific windows to floating mode
 for_window [class="microsoft-edge-dev"] floating enable
 for_window [class="yesplaymusic"]     floating enable
+for_window [class="listen1"] floating endable
 for_window [class="telegram-desktop"]     floating enable
 for_window [class="mpv"]     floating enable
 
 assign [class="microsoft-edge-dev"] 2
 assign [class="yesplaymusic"] 5
+assign [class="listen1"] 5
 assign [class="telegram-desktop"] 6
 assign [class="mpv"] 7
 
