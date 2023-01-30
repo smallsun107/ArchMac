@@ -267,6 +267,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id fcitx5 &
 exec --no-startup-id dunst &
 exec --no-startup-id flameshot &
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # set desktop background with custom effect
 exec --no-startup-id betterlockscreen -w dim
