@@ -59,8 +59,8 @@ bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAUL
 bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # light
-bindsym XF86MonBrightnessDown exec light -U 10
-bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -228,18 +228,27 @@ bindsym $mod+r mode "resize"
 # set specific windows to floating mode
 
 # set specific windows to floating mode
-for_window [class="microsoft-edge-dev"] floating enable
+for_window [class="Microsoft-edge-dev"] floating enable
+for_window [class="Chromium"] floating enable
 for_window [class="yesplaymusic"]     floating enable
 for_window [class="listen1"] floating endable
-for_window [class="telegram-desktop"]     floating enable
+for_window [class="TelegramDesktop"]     floating enable
 for_window [class="mpv"]     floating enable
+for_window [class="vlc"]     floating enable
+for_window [class="ida.exe"]   floating enable
+for_window [class="ida64.exe"] floating enable
+for_window [class="VirtualBox Manager"] floating enable
 
-assign [class="microsoft-edge-dev"] 2
+assign [class="Microsoft-edge-dev"] 2
+assign [class="Chromium"] 2
 assign [class="yesplaymusic"] 5
 assign [class="listen1"] 5
-assign [class="telegram-desktop"] 6
+assign [class="TelegramDesktop"] 6
 assign [class="mpv"] 7
-
+assign [class="vlc"] 7
+assign [class="ida.exe"] 3
+assign [class="ida64.exe"] 3
+assign [class="VirtualBox Manager"] 8
 
 # dracula
 # class                 border  bground text    indicator child_border
@@ -261,5 +270,5 @@ exec --no-startup-id flameshot &
 
 # set desktop background with custom effect
 exec --no-startup-id betterlockscreen -w dim
-bindsym $mod+shift+x exec betterlockscreen -l dim
+bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dim
 
